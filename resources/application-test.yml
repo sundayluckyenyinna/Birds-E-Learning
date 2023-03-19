@@ -1,0 +1,61 @@
+# Server configuration properties.
+server:
+  port: 9090
+
+# Database configuration properties.
+birds:
+  datasource:
+    sql:
+      mysql:
+        host: 173.254.28.210
+        port: 3306
+        username: thycorpi_birds_username
+        password: XMyX@.*f*]r8
+        database: thycorpi_birds_office
+        type: mysql
+  authorization:
+    token:
+      secret: Password!23#
+      expiresIn: 10
+  otp:
+    expiresIn: 10*min
+    length: 4
+    anotherOtpWaitInSec: 36
+  hash:
+    passwordHashStrength: 10
+
+oauth2:
+  google:
+    clientId: 444371298128-c3gjj9oprig4lt082us75ibqeun8bb1u.apps.googleusercontent.com
+    clientSecret: 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
+    projectId: birds-e-learning
+    authProviderCertUrl: https://www.googleapis.com/oauth2/v1/certs
+    redirectUrl: https://birds-e-learning-test.herokuapp.com/user/oauth2/consent-signup
+    authUrl: https://accounts.google.com/o/oauth2/auth
+    tokenUrl: https://oauth2.googleapis.com/token
+    defaultScopes: email%20profile%20openid
+    responseType: code
+    grantType: authorization_code
+    userProfileUrl: https://www.googleapis.com/oauth2/v1/userinfo
+    accessType: offline
+    approvalPrompt: force
+
+  facebook:
+    clientId: 218977500604574
+    clientSecret: 61bce055a499dd7e9aa5818f9c67ff7f
+    redirectUrl: https://birds-e-learning-test.herokuapp.com/user/oauth2/consent-signup
+  internalPassword: xbiti6p5TIVkn4OTFgk3u6S6qH8d7NGSwm92F4AWS5eUlSFbmZfgOxPglsekHJgb06vpceGC6Vy//MNIu/zxxDJTLTlJ
+
+mail:
+  username: admin@blns.dgtechltd.com
+  password: Ovisco76!0#
+  incomingServer: http://blns.dgtechltd.com
+  imapPort: 993
+  pop3Port: 995
+  outgoingServer: http://blns.dgtechltd.com
+  smtpPort: 465
+  name: http://blns.dgtechltd.com
+  host: blns.dgtechltd.com
+  from: blns.dgtechltd.com@gmail.com
+  otp:
+    subject: Birds-E-Learning signup email verification

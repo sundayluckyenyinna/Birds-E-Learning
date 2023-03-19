@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "deleteOutDir": false,
+    "assets": [
+      {"include": "../resources/*.yml", "outDir": "./dist/resources"},
+      {"include": "../resources/messages/*yml", "outDir": "./dist/resources"},
+      {"include": "../resources/templates", "outDir": "./dist/resources"},
+      {"include": "./package.json", "watchAssets": true}
+    ]
+  }
+}
