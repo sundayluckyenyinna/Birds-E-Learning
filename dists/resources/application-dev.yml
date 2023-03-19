@@ -1,0 +1,94 @@
+# Server configuration properties.
+server:
+  port: 9090
+
+# Database configuration properties.
+birds:
+  datasource:
+    sql:
+      mysql:
+        host: 173.254.28.210
+        port: 3306
+        username: thycorpi_blnusers2 #thycorpi_blnusers
+        password: Ovisco76!0 #9R0oAmjM0vsx
+        database: thycorpi_blns2 #thycorpi_bln
+        type: mysql
+  authorization:
+    token:
+      secret: Password!23#
+      expiresIn: 1440   #(in minutes)
+  otp:
+    expiresIn: 10*min
+    length: 4
+    anotherOtpWaitInSec: 36
+  hash:
+    passwordHashStrength: 10
+  user: # change
+    password:
+      reset:
+        expiresIn: 1
+    defaultProfilePic: https://birds-e-learning.herokuapp.com/img/profile.png
+  baseUrl: http://localhost:9090
+  rememberMe:
+    expiresIn: 1   # months
+    autoInternalPassword: jh"{^v=,
+  storage:
+    drive:
+      parentFolderId: 1Jp2XarS0XNneTfr2eDwUlXA0NpBXN9kw
+
+  entities:
+    defaultQueryLimit: 30
+
+  ftp:
+    host: 173.254.28.210
+    user: thycorpi
+    password: Ovisco76!0#82
+    staticProfilePicPath: https://blns.dgtechltd.com/uploads/demo/team/
+    staticCourseImgPath: https://blns.dgtechltd.com/uploads/demo/courses/
+    filePathPrefix: demo
+    driver: local
+
+
+oauth2:
+  google:
+    clientId: 444371298128-c3gjj9oprig4lt082us75ibqeun8bb1u.apps.googleusercontent.com
+    clientSecret: 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
+    projectId: birds-e-learning
+    authProviderCertUrl: https://www.googleapis.com/oauth2/v1/certs
+    redirectUrl: https://birds-e-learning.herokuapp.com/user/oauth2/consent-signup
+    authUrl: https://accounts.google.com/o/oauth2/auth
+    tokenUrl: https://oauth2.googleapis.com/token
+    defaultScopes: email%20profile%20openid
+    responseType: code
+    grantType: authorization_code
+    userProfileUrl: https://www.googleapis.com/oauth2/v1/userinfo
+    accessType: offline
+    approvalPrompt: force
+
+  facebook:
+    authUrl: https://www.facebook.com/v8.0/dialog/oauth
+    clientId: 218977500604574
+    clientSecret: 61bce055a499dd7e9aa5818f9c67ff7f
+    redirectUrl: https://birds-e-learning.herokuapp.com/user/oauth2/consent-signup
+    tokenUrl: https://graph.facebook.com/v8.0/oauth/access_token
+    meUrl: https://graph.facebook.com/me
+    baseApiUrl: https://graph.facebook.com/
+    grantType: authorization_code
+    defaultScopes: public_profile
+  internalPassword: xbiti6p5TIVkn4OTFgk3u6S6qH8d7NGSwm92F4AWS5eUlSFbmZfgOxPglsekHJgb06vpceGC6Vy//MNIu/zxxDJTLTlJ
+
+mail:
+  username: admin@blns.dgtechltd.com
+  password: Ovisco76!0#
+  incomingServer: http://blns.dgtechltd.com
+  imapPort: 993
+  pop3Port: 995
+  outgoingServer: http://blns.dgtechltd.com
+  smtpPort: 465
+  name: http://blns.dgtechltd.com
+  host: blns.dgtechltd.com
+  from: blns.dgtechltd.com@gmail.com
+  otp:
+    subject: Birds-E-Learning signup email verification
+    passwordResetSubject: Birds-E-Learning Network Password Reset
+
