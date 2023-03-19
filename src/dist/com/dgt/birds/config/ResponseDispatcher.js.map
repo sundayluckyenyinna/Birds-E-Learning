@@ -1,0 +1,1 @@
+{"version":3,"file":"ResponseDispatcher.js","sourceRoot":"","sources":["../../../../../src/com/dgt/birds/config/ResponseDispatcher.ts"],"names":[],"mappings":";;AAGA,2CAA4C;AAE5C,MAAqB,kBAAkB;;AAAvC,qCAKC;AAHU,0BAAO,GAAG,CAAC,QAAkB,EAAE,WAAwB,EAAE,EAAE;IAC9D,OAAO,QAAQ,CAAC,MAAM,CAAC,WAAW,CAAC,UAAU,IAAI,mBAAU,CAAC,EAAE,CAAC,CAAC,IAAI,CAAC,WAAW,CAAC,CAAC;AACtF,CAAC,CAAA"}

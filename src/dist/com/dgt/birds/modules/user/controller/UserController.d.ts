@@ -1,0 +1,36 @@
+import { Request, Response } from "express";
+import CreateUserRequestDTO from "../dto/request/CreateUserRequestDTO";
+import UserService from "../service/UserService";
+import LoginUserRequestDTO, { AutomaticLoginRequestDTO } from "../dto/request/LoginUserRequestDTO";
+import LoggerFactory from "../../../config/LoggerFactory";
+import ValidateOtpRequestDTO from "../dto/request/ValidateOtpRequestDTO";
+import Oauth2ValidateUserRequestDTO from "../dto/request/Oauth2ValidateUserRequestDTO";
+import UpdatePasswordRequestDTO from "../dto/request/UpdatePasswordRequestDTO";
+import OauthConsentUserRequestDTO from "../dto/request/OauthConsentUserRequestDTO";
+import UpdateUserDetailsRequestDTO from "../dto/request/UpdateUserDetailsRequestDTO";
+import UpdateUserPasswordRequestDTO from "../dto/request/UpdateUserPasswordRequestDTO";
+export default class UserController {
+    private readonly userService;
+    logger: LoggerFactory;
+    constructor(userService: UserService);
+    handleSignUpUserRequest(req: Request, res: Response, requestDTO: CreateUserRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleUserLoginRequest(req: Request, res: Response, loginRequest: LoginUserRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleAutomaticUserLoginRequest(req: Request, res: Response, automaticLoginRequest: AutomaticLoginRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleOtpValidation(req: Request, res: Response, requestDTO: ValidateOtpRequestDTO): Promise<Response<any, Record<string, any>>>;
+    sendPasswordEmail(req: Request, res: Response, email: string): Promise<Response<any, Record<string, any>>>;
+    handleShowResetPasswordPage(req: Request, res: Response, encodedEmail: string): Promise<Response<any, Record<string, any>>>;
+    handlePasswordChangeSubmit(req: Request, res: Response, requestBody: any): Promise<Response<any, Record<string, any>>>;
+    handleUserOauth2ConsentRequest(req: Request, res: Response, requestDTO: OauthConsentUserRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleUserOauth2ConsentValidation(req: any, res: Response, requestDTO: Oauth2ValidateUserRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleSendOtpRequest(req: Request, res: Response, email: string): Promise<Response<any, Record<string, any>>>;
+    handleConsent(res: Response, code: string, state: string): Promise<Response<any, Record<string, any>>>;
+    handleMobilePasswordResetRequest(req: Request, res: Response, email: string): Promise<Response<any, Record<string, any>>>;
+    handleOtpForMobilePasswordReset(req: Request, res: Response, requestDTO: ValidateOtpRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleUpdateOfMobilePassword(req: Request, res: Response, requestDTO: UpdatePasswordRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleUserDetailsRequest(req: Request, res: Response): Promise<Response<any, Record<string, any>>>;
+    handleGetSingleUserDetailsRequest(req: any, res: any, email: string): Promise<Response<any, Record<string, any>>>;
+    handleUserDetailsUpdate(req: Request, res: Response, requestDTO: UpdateUserDetailsRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleUserPasswordUpdate(req: Request, res: Response, requestDTO: UpdateUserPasswordRequestDTO): Promise<Response<any, Record<string, any>>>;
+    handleUserLogout(req: Request, res: Response): Promise<Response<any, Record<string, any>>>;
+    private getAuthToken;
+}

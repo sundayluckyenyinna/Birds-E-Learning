@@ -1,0 +1,52 @@
+birds:
+  errorMessages:
+    noMainYamlFound: No application yaml file found!
+
+E00: Operation successful.
+E01: IP banned.
+E02: User record already exists.
+E03: User record not found.
+E04: Request is processing.
+E05: Failed transaction.
+E06: Bad request due to failed request body model.
+E07: Invalid password.
+E08: Bad Request.
+E09: Invalid user role(s)!
+E10: Invalid otp!.
+E11: Expired otp!.
+E12: Account status is Locked. Please contact administrator.
+E13: Account unverified. Please verify account by otp.
+E14: Otp already verified!
+E15: Oauth2 handshake failed. Please contact oauth2 service provider.
+E16: CSRF attack. You are forbidden to proceed!
+E17: Oauth2 user failed to consent.
+E18: Invalid deviceId for MOBILE channel.
+E19: Initial otp sent to this email has not expired. Use the otp or wait till expiration time before requiring for another OTP.
+E20: Remember me feature expired by system.
+E21: Invalid channel for automatic login request!
+E22: No initial login record found!
+E23: Invalid signer or logger.
+E24: No user preference found.
+E25: Card already linked.
+E26: Card not found.
+E27: Email mismatch in system. Try creating an account with this new email address!.
+E28: You are not allowed to edit your profile as your signup provider manages your details.
+E95: Forbidden cross token usage!.
+E96: Failed authentication!
+E97: You are forbidden from making this request!.
+E99: Internal system error. Please contact administrator or support.
+
+security:
+  auth:
+    noAuthProvided: Authentication failed. No bearer token header provided!
+    invalidFormatAuthHeader: Invalid authorization header format. Value must start with 'Bearer '
+    blankAuth: Authentication failed. Bearer token cannot be blank or empty!
+    noRecord: Authentication failed. No record found for this email address.
+    tokenExpired: Expired Token. Please request for a fresh token!
+
+swagger:
+  title: Birds E-Learning Web APIs
+  desc: Detailed API documentation for Web and Mobile integrations.
+  version: 1.1.0
+  tag: Birds E-Learning
+  apiPath: /api/docs/v1
